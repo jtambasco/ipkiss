@@ -130,7 +130,7 @@ class Shape(transformable.Transformable, StrongPropertyInitializer, MixinBowl):
             if not "end_face_angle" in kwargs:
                 kwargs["end_face_angle"] = points.end_face_angle
 
-        if (points != None):
+        if (points is not None):
             if (isinstance(points, list) or isinstance(points, ndarray) or isinstance(points, Shape) or isinstance(points, tuple)):
                 if (len(points) > 0):
                     kwargs["points"] = points
